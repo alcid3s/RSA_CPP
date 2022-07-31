@@ -102,6 +102,47 @@ In this code, 'power' is our E or D, in this case it will function as our D. Our
 this keeps going on. However when the fourth bit is checked it will be 0. So only the var will change and result will stay the same. Keep doing this and when the while loop is finished 
 result will be equal to 5. 
 
+My notes for this example:
+```
+power = 1100111
+result = 1
+var = 47
+n = 143
+
+first loop:
+if(1):
+result = 1 * 47 % 143 = 47
+var = 47 * 47 % 143 = 64
+
+second loop:
+if(1):
+result = 47 * 64 % 143 = 5
+var = 64 * 64 % 143 = 92
+
+third loop:
+if(1):
+result = 5 * 92 % 143 = 31
+var = 92 * 92 % 143 = 27
+
+fourth loop:
+if(0):
+var = 27 * 27 % 143 = 14
+
+fifth loop:
+if(0):
+var = 14 * 14 % 143 = 53
+
+sixth loop:
+if(1):
+result = 31 * 53 % 143 = 70
+var = 53 * 53 % 143 = 92
+
+final loop:
+if(1):
+result = 70 * 92 % 143 = 5
+var = 92 * 92 % 143 = 27
+```
+
 ## Output
 Upon running building and running RSA_CPP.cpp. The output could be something along the lines of this:
 ```
