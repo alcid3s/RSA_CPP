@@ -5,7 +5,7 @@ so the encryption and decryption key cannot be guessed right off the bat. The RS
 this is due to the prime numbers being too insignificant to actually secure any data efficiently and effectively. It is however a great way 
 to see how the RSA encryption method works in practice.
 
-##RSA breakdown
+## RSA breakdown
 For the RSA encryption method the program starts with 2 prime numbers.
 ```cpp
 		size_t p = generatePrimeNumber();
