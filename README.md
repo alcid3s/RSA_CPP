@@ -1,5 +1,5 @@
 ﻿# RSA_CPP
-The [**RSA ENCRYPTION**](https://brilliant.org/wiki/rsa-encryption/) (Rivest-Shamir-Adleman) is a method for encrypting and decrypting data.
+The [**RSA encryption**](https://brilliant.org/wiki/rsa-encryption/) (Rivest-Shamir-Adleman) is a method for encrypting and decrypting data.
 This encryption method is widely used for secure data transmission. This project is an implementation of said algorithm with randomisation
 so the encryption and decryption key cannot be guessed right off the bat. The RSA.h header file can be used for educational purposes only,
 this is due to the prime numbers being too insignificant to actually secure any data efficiently and effectively. It is however a great way 
@@ -18,12 +18,12 @@ For the RSA encryption method the program starts with 2 prime numbers.
 For now let's say P is equal to 11 and Q is equal to 13. With those two variables the program will calculate the N value by multiplying both the
 p and the q together. N = P * Q, N = 11 * 13, N = 143. 
 
-Now comes a mathematical function called ["Euler's totient function"](https://www.youtube.com/watch?v=qa_hksAzpSg) or "Euler's phi" that bears the Ф mark.
-In the program the phi of N (Ф(N)) gots the character Z. Z is calculated like so: Z = (P - 1) * (Q - q), Z = (11 - 1) * (13 - 1), Z = 120.
+Now comes a mathematical function called [Euler's totient function](https://www.youtube.com/watch?v=qa_hksAzpSg) or "Euler's phi" that bears the Ф mark.
+In the program the phi of N (Ф(N)) gots the character Z. Z is calculated like so: Z = (P - 1) * (Q - 1), Z = (11 - 1) * (13 - 1), Z = 120.
 With those numbers done the program goes on to calculate the E and the D. 
 
-The E must bear the following conditions: 1 < e < Ф(N) and e has to be [coprime](https://en.wiktionary.org/wiki/coprime)
-with both N and Ф(N). The program does this by checking the "Greatest Common Divisor" (gcd) of all numbers up to Ф(N) and if the gcd is equal to 1 it obeys the conditions given above.
+The E must obey the following conditions: 1 < e < Ф(N) and e has to be [coprime](https://en.wiktionary.org/wiki/coprime)
+with both N and Ф(N). The program does this by checking the [Greatest Common Divisor](https://www.youtube.com/watch?v=JUzYl1TYMcU) (gcd) of all numbers up to Ф(N) and if the gcd is equal to 1 it obeys the conditions given above.
 ```cpp
 	size_t generateE(size_t z) {
 		std::vector<size_t> arr;
