@@ -75,8 +75,7 @@ private:
 		bool isPrime = false;
 		size_t maxValue = (int)sqrt(sqrt(ULLONG_MAX));
 		while (!isPrime) {
-			num = (
-				rand() % maxValue);
+			num = (rand() % maxValue);
 			if (num >= 7919) {
 				bool flag = false;
 				for (size_t i = 2; i < num; i++) {
