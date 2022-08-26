@@ -144,7 +144,7 @@ var = 92 * 92 % 143 = 27
 ```
 
 ## Output
-Upon running building and running RSA_CPP.cpp. The output could be something along the lines of this:
+Upon building and running RSA_CPP.cpp. The output could be something along the lines of this:
 ```
 Creating RSA keys...
 Done!
